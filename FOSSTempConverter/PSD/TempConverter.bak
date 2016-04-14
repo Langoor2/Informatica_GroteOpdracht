@@ -1,0 +1,19 @@
+@PSDL@
+1
+10 92 3
+0
+1
+seq
+25
+10
+12 6 schrijf "Voer aantal graden Celsius in"
+12 8 lees TempC
+12 10 TempK:= TempC + 273
+12 12 TempF:= (9*TempC/5)+32
+12 14 schrijf "-=-=-=-=-=-=-=-=-"
+12 16 schrijf "De temperatuur is "&
+12 18 schrijf TempK&
+12 20 schrijf "K en "&
+12 22 Schrijf TempF&
+12 24 schrijf " graden F"
+@
