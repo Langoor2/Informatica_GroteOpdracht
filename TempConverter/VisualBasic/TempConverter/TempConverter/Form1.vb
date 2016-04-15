@@ -5,7 +5,7 @@
 
     Private Sub TempC_TextChanged(sender As Object, e As EventArgs) Handles TempC.TextChanged
         If IsNumeric(TempC.Text) = True Then
-            TempK.Text = TempC.Text + 237.15
+            TempK.Text = TempC.Text + 273.15
             TempF.Text = (TempC.Text * 9 / 5) + 32
         Else
             TempK.Text = "ERROR"
