@@ -1,0 +1,69 @@
+@PSDL@
+1
+2 342 3
+0
+3
+seq
+25
+10
+4 6 Schrijf "Dit programma rekent automatisch de ABC formule voor je uit!"
+4 8 Schrijf "Voer getal A in..."
+4 10 lees A
+4 12 Schrijf "Voer getal B in..."
+4 14 lees B
+4 16 Schrijf "Voer getal C in..."
+4 18 lees C
+4 20 D:=(B^2)-4*A*C
+4 22 Schrijf "De discriminant is "&
+4 24 Schrijf D
+sel1
+49
+1
+62 28 D>0
+64
+2
+2 64 33
+1
+4 32 JA
+1
+seq
+49
+6
+4 36 Schrijf "De X-Waardes zijn "&
+4 38 X1:=(-B-D)/2*A
+4 40 Schrijf X1&
+4 42 Schrijf " en "&
+4 44 X2:=(-B+D)/2*A
+4 46 Schrijf X2
+64 342 33
+1
+334 32 NEE
+1
+sel1
+49
+1
+188 36 D=0
+192
+2
+64 192 41
+1
+66 40 JA
+1
+seq
+49
+3
+66 44 Schrijf "De discriminant is 0. Er is hier 1 uitkomst mogelijk"
+66 46 X1:=-(B/2*A)
+66 48 Schrijf X1
+192 342 41
+1
+334 40 NEE
+1
+seq
+49
+1
+194 44 Schrijf "De discriminant is kleiner dan 0, er is geen uitkomst mogelijk."
+seq
+53
+0
+@

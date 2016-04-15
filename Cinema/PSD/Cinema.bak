@@ -1,0 +1,82 @@
+@PSDL@
+1
+2 170 3
+0
+6
+seq
+9
+2
+4 6 schrijf "hoeveel personen zijn er?"
+4 8 lees pers
+sel1
+37
+1
+128 12 pers>0
+136
+2
+2 136 17
+1
+4 16 JA
+1
+sel1
+37
+1
+92 20 pers>9
+100
+2
+2 100 25
+1
+4 24 JA
+1
+sel1
+37
+1
+52 28 pers<20
+60
+2
+2 60 33
+1
+4 32 JA
+1
+seq
+37
+1
+4 36 prijstot:=8-(8/100*15)*pers
+60 100 33
+1
+92 32 NEE
+1
+seq
+37
+1
+62 36 prijstot:=5.6*pers
+100 136 25
+1
+128 24 NEE
+1
+seq
+37
+1
+102 28 prijstot:=pers*8
+136 170 17
+1
+162 16 NEE
+1
+seq
+37
+1
+138 20 schrijf "error"
+seq
+41
+1
+4 40 schrijf prijstot
+seq
+45
+0
+seq
+49
+0
+seq
+53
+0
+@
