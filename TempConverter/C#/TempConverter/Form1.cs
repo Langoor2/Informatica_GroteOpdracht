@@ -12,7 +12,7 @@ namespace TempConverter
 {
     public partial class Form1 : Form
     {
-        double VarTmpC;
+        double VarTmpC; // Creating variables
         double VarTmpF;
         double VarTmpK;
 
@@ -21,42 +21,21 @@ namespace TempConverter
             InitializeComponent();
 
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            String input = TempC.Text;
-            if (double.TryParse(input, out VarTmpC))
-            {
-                VarTmpF = (9 * VarTmpC / 5) + 32;
-                VarTmpK = VarTmpC + 273.15;
-                TempK.Text = VarTmpK + "";
-                TempF.Text = VarTmpF + "";
-            }
-            else
-            {
-                TempK.Text = "ERROR";
-                TempF.Text = TempK.Text;              
-            }
-        }
-
-        private void TempF_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TempK_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void TempC_TextChanged(object sender, EventArgs e)
         {
-            button1_Click(sender, e);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            String input = TempC.Text;
+            if (double.TryParse(input, out VarTmpC)) // Checks if the input is a number
+            {
+                VarTmpF = (9 * VarTmpC / 5) + 32; // Formula for ºC -> ºF
+                VarTmpK = VarTmpC + 273.15; // Formula for ºC -> K
+                TempK.Text = VarTmpK + ""; // Converts double variable to a textbox
+                TempF.Text = VarTmpF + ""; // There is a nicer way to do this, but this was easier
+            }
+            else // Triggers an error when the user enters a non-number value
+            {
+                TempK.Text = "ERROR";
+                TempF.Text = TempK.Text;
+            }
         }
     }
 }

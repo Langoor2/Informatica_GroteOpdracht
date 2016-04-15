@@ -79,7 +79,6 @@
             this.TempF.Name = "TempF";
             this.TempF.Size = new System.Drawing.Size(100, 20);
             this.TempF.TabIndex = 5;
-            this.TempF.TextChanged += new System.EventHandler(this.TempF_TextChanged);
             // 
             // TempK
             // 
@@ -88,12 +87,12 @@
             this.TempK.Name = "TempK";
             this.TempK.Size = new System.Drawing.Size(100, 20);
             this.TempK.TabIndex = 6;
-            this.TempK.TextChanged += new System.EventHandler(this.TempK_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(216, 97);
             this.Controls.Add(this.TempK);
             this.Controls.Add(this.TempF);
@@ -104,8 +103,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "TempConverter";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "TempConverter C#";
             this.ResumeLayout(false);
             this.PerformLayout();
 
